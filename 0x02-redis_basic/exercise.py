@@ -3,7 +3,7 @@
 redis storage class
 """
 import redis
-from typing import Union, Callable, Optional
+from typing import Union, Callable
 import uuid
 
 
@@ -40,7 +40,7 @@ class Cache:
             return fn(data)
         return data
 
-    def get_str(self, key: str) -> Optional[str]:
+    def get_str(self, key: str) -> str:
         """
         convertion function for string
         """
